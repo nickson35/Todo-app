@@ -1,0 +1,106 @@
+@import "index.css" layer(default-styles);
+
+.wrapper {
+  width: min(700px, 100%);
+  min-height: 80vh;
+  margin-inline: auto;
+  margin-block-start: 5rem;
+  background-color: var(--color-primary);
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(42, 43, 49);
+  padding: 2rem;
+  font-size: var(--h1-font-size);
+}
+
+.form-container {
+  background-color: var(--color-primary);
+}
+
+form {
+  width: min(500px, 95%);
+  display: flex;
+  gap: 2rem;
+  margin-inline: auto;
+  margin-block-start: 2.5rem;
+
+  input {
+    width: 80%;
+    padding: 1rem 1.5rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline: 1px solid white;
+    border: 2px solid transparent;
+    transition: border 100ms linear;
+
+    &:hover,
+    &:focus-within {
+      border: 2px solid white;
+    }
+  }
+  button {
+    width: 3rem;
+    aspect-ratio: 1;
+    text-align: center;
+    background-color: white;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    outline: 1px solid transparent;
+    transition: box-shadow 100ms ease-in-out;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: inset -2px 2px 0px 1px var(--color-primary),
+        inset 2px -2px 0px 1px var(--color-primary);
+    }
+  }
+}
+
+.todo-list-items {
+  --_margin-setter: 1rem;
+
+  width: min(600px, 90%);
+  margin-inline: auto;
+  margin-block-start: calc(var(--_margin-setter) * 2);
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+p.todo-title {
+  --_para-font-size: 1rem;
+  word-wrap: break-word;
+  text-wrap: pretty;
+  text-align: left;
+  letter-spacing: 1px;
+  line-height: 35px;
+  word-spacing: 1px;
+  font-size: var(--_para-font-size);
+
+  &::first-letter {
+    text-transform: capitalize;
+    font-size: calc(var(--_para-font-size) + 0.5rem);
+  }
+}
+
+.todo-delete-btn {
+  cursor: pointer;
+  background-color: transparent;
+  outline: transparent;
+  border: transparent;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  padding-inline: 0.5rem;
+}
